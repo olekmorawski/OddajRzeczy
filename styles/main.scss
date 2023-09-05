@@ -1,26 +1,52 @@
+@import "styles/normalize";
+@import "styles/colors";
+@import "styles/fonts";
+
 html,
 body {
   font-size: 16px;
   position: relative;
-  width: 100vw;
-  height: 100vh;
 }
-
-.header {
+.bg {
+  background-color: red;
+  background: transparent url("styles/images/Home-Hero-Image.jpg") 500% 0%
+    no-repeat padding-box;
+  height: 100vh;
+  width: 100vw;
+}
+.nav {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  .navbar {
-    text-decoration: none;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: white;
+  .nav_links {
+    display: flex;
+    align-items: center;
+    list-style: none;
     a {
       width: 80px;
       height: 42px;
       border: 0.75px solid #3c3c3c;
+      text-align: center;
+      margin-left: 5px;
+      text-decoration: none;
+      display: block;
+      line-height: 42px;
     }
   }
 }
-.buttons {
-  width: 310px;
-  height: 120px;
-  border: 0.75px solid #3c3c3c;
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .buttons {
+    display: flex;
+    margin-top: 20px;
+    button {
+      width: 310px;
+      height: 120px;
+      border: 0.75px solid #3c3c3c;
+      margin-left: 20px;
+    }
+  }
 }
