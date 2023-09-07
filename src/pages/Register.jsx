@@ -24,6 +24,14 @@ const Register = () => {
     }
   };
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   return (
     <>
       <div className="onboarding">
@@ -38,6 +46,7 @@ const Register = () => {
               placeholder="Your Email"
               required={true}
               value={formData.email}
+              onChange={handleChange}
             />
             <label>Password</label>
             <input
@@ -47,6 +56,7 @@ const Register = () => {
               placeholder="Your Password"
               required={true}
               value={formData.password}
+              onChange={handleChange}
             />
           </section>
           <button type="submit" onSubmit={handleSubmit}>
