@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Nav from "../components/Nav";
 
 const Register = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  const [isRegisterSuccessful, setIsRegisterSuccessful] = useState(false);
 
   let navigate = useNavigate();
 
@@ -18,8 +20,7 @@ const Register = () => {
         formData
       );
       const success = response.status === 201;
-
-      if (success) navigate("/");
+      if (success) setIsRegisterSuccessful(true);
     } catch (err) {
       console.log(err);
     }
@@ -33,9 +34,16 @@ const Register = () => {
     }));
   };
 
+  useEffect(() => {
+    if (isRegisterSuccessful) {
+      navigate("/");
+    }
+  }, [isRegisterSuccessful]);
+
   return (
     <>
       <div className="register">
+        <Nav />
         <h2>CREATE ACCOUNT</h2>
         <form onSubmit={handleSubmit}>
           <section>

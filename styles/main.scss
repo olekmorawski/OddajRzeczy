@@ -136,3 +136,19 @@ body {
     }
   }
 }
+
+.login {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  height: 100vh;
+  width: 100vw;
+  .login_body {
+    display: flex;
+    justify-content: center;
+    .login_box {
+      margin-top: 296px;
+      width: 385px;
+      height: 235px;
+      background: #f0f1f1 0% 0% no-repeat padding-box;
+    }
+  }
+}

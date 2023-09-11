@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Nav from "../components/Nav";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -42,50 +43,55 @@ const Login = () => {
   return (
     <>
       <div className="login">
-        <div className="top"> </div>
-        <div className="bottom">
-          <div className="make">Log in</div>
-          <div className="jpg"></div>
-          <div className={"form2"}>
-            <form
-              className={"register-form"}
-              onSubmit={handleSubmit}
-              id="myForm"
-            >
-              <label className={"label-form"} htmlFor={"email"}>
-                E-mail
-              </label>
-              <input
-                name={"email"}
-                id={"email"}
-                value={FormData.email}
-                onChange={handleChange}
-              />
-              <label className={"label-form"} htmlFor={"password"}>
-                Password
-              </label>
-              <input
-                type={"password"}
-                id={"password"}
-                name={"password"}
-                value={FormData.password}
-                onChange={handleChange}
-              />
-            </form>
-          </div>
-          <div className="btns">
-            <a href={"/signup"}>
-              <button
-                className={"login"}
-                type={"button"}
-                onClick={() => navigate("/signup")}
+        <Nav />
+        <div className="login_body">
+          <div className="login_box">
+            <div className="login_text">Log in</div>
+            <div className={"form2"}>
+              <form
+                className={"register-form"}
+                onSubmit={handleSubmit}
+                id="myForm"
               >
-                Sign Up
+                <label className={"label-form"} htmlFor={"email"}>
+                  E-mail
+                </label>
+                <input
+                  name={"email"}
+                  id={"email"}
+                  value={FormData.email}
+                  onChange={handleChange}
+                />
+                <label className={"label-form"} htmlFor={"password"}>
+                  Password
+                </label>
+                <input
+                  type={"password"}
+                  id={"password"}
+                  name={"password"}
+                  value={FormData.password}
+                  onChange={handleChange}
+                />
+              </form>
+            </div>
+            <div className="btns">
+              <a href={"/signup"}>
+                <button
+                  className={"signup"}
+                  type={"button"}
+                  onClick={() => navigate("/signup")}
+                >
+                  Sign Up
+                </button>
+              </a>
+              <button
+                className={"submit"}
+                type={"submit"}
+                onClick={handleSubmit}
+              >
+                Log in
               </button>
-            </a>
-            <button className={"submit"} type={"submit"} onClick={handleSubmit}>
-              Log in
-            </button>
+            </div>
           </div>
         </div>
       </div>
