@@ -1,17 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const [isLoginSuccessful, setIsLoginSuccessful] = useState(false);
+
+  let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("test");
+    try {
+      const response = await axios.post(
+        `http://localhost:8000/login`,
+        formData
+      );
+      const success = response.status === 201;
+      if (success) setIsLoginSuccessful(true);
+    } catch (err) {
+      console.log(err);
+    }
   };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  useEffect(() => {
+    if (isLoginSuccessful) {
+      navigate("/");
+    }
+  }, [isLoginSuccessful]);
 
   return (
     <>
-      <div className="registermain">
+      <div className="login">
         <div className="top"> </div>
         <div className="bottom">
           <div className="make">Log in</div>
@@ -28,8 +58,8 @@ const Login = () => {
               <input
                 name={"email"}
                 id={"email"}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={FormData.email}
+                onChange={handleChange}
               />
               <label className={"label-form"} htmlFor={"password"}>
                 Password
@@ -38,19 +68,22 @@ const Login = () => {
                 type={"password"}
                 id={"password"}
                 name={"password"}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={FormData.password}
+                onChange={handleChange}
               />
             </form>
           </div>
           <div className="btns">
-            <a href={"/register"}>
-              {" "}
-              <button className={"login"} type={"button"}>
+            <a href={"/signup"}>
+              <button
+                className={"login"}
+                type={"button"}
+                onClick={() => navigate("/signup")}
+              >
                 Sign Up
               </button>
             </a>
-            <button className={"submit"} type={"submit"}>
+            <button className={"submit"} type={"submit"} onClick={handleSubmit}>
               Log in
             </button>
           </div>

@@ -13,12 +13,13 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:8000/user`, {
-        formData,
-      });
-      const success = response.status === 200;
+      const response = await axios.post(
+        `http://localhost:8000/signup`,
+        formData
+      );
+      const success = response.status === 201;
 
-      if (success) navigate("/somepage"); // change this to propper page later
+      if (success) navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -34,11 +35,11 @@ const Register = () => {
 
   return (
     <>
-      <div className="onboarding">
+      <div className="register">
         <h2>CREATE ACCOUNT</h2>
         <form onSubmit={handleSubmit}>
           <section>
-            <label htmlFor="first_name">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="text"
               name="email"
@@ -48,9 +49,9 @@ const Register = () => {
               value={formData.email}
               onChange={handleChange}
             />
-            <label>Password</label>
+            <label htmlFor="password">Password</label>
             <input
-              type="text"
+              type="password"
               name="password"
               id="password"
               placeholder="Your Password"

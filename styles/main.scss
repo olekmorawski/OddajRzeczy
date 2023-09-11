@@ -8,6 +8,10 @@ body {
   position: relative;
 }
 
+* {
+  font-family: Open Sans;
+}
+
 .bg {
   background: transparent url("styles/images/Home-Hero-Image.jpg") 0% 0%
     no-repeat padding-box;
@@ -17,34 +21,19 @@ body {
 
 .nav {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   width: 100%;
   background-color: white;
 
-  .nav_links {
+  .auth_links {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    list-style: none;
-
-    .auth_links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 20px;
-
-      a {
-        width: 80px;
-        height: 42px;
-        border: 0.75px solid #3c3c3c;
-        text-align: center;
-        margin-bottom: 5px;
-        text-decoration: none;
-        display: block;
-        line-height: 42px;
-      }
-    }
+    margin-bottom: 10px;
 
     a {
+      margin-top: 37px;
       width: 80px;
       height: 42px;
       border: 0.75px solid #3c3c3c;
@@ -53,6 +42,39 @@ body {
       text-decoration: none;
       display: block;
       line-height: 42px;
+    }
+    a:first-child {
+      border: none;
+    }
+
+    a:last-child {
+      border: 0.75px solid #fad648;
+      margin-right: 142px;
+    }
+  }
+
+  .nav_links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    a {
+      width: 145px;
+      height: 42px;
+      text-align: center;
+      margin-left: 5px;
+      text-decoration: none;
+      display: block;
+      line-height: 42px;
+      &.active {
+        border: 0.75px solid #3c3c3c;
+      }
+      &:not(.active) {
+        border: none;
+      }
+    }
+    a:last-child {
+      margin-right: 142px;
     }
   }
 }
@@ -68,10 +90,20 @@ body {
     flex: 1;
 
     h1 {
+      width: 674px;
+      height: 107px;
       margin-bottom: 20px;
       margin-right: 275px;
       letter-spacing: -0.76px;
       text-align: center;
+      margin-top: 210px;
+    }
+
+    .decoration-img {
+      display: block;
+      margin: 25px auto 0;
+      width: 100px;
+      height: 50px;
     }
   }
 
@@ -89,6 +121,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: row;
       &:first-child {
         margin-right: 20px;
       }
@@ -97,7 +130,8 @@ body {
       }
       span {
         font-size: 16px;
-        padding: 0 15px;
+        display: inline-block;
+        padding: 0 5px;
       }
     }
   }
