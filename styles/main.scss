@@ -272,7 +272,7 @@ body {
       font-size: 38px;
       letter-spacing: -0.76px;
       color: #3c3c3c;
-      margin-bottom: 25px; 
+      margin-bottom: 25px;
     }
     .decoration {
       width: 253px;
@@ -364,4 +364,156 @@ body {
 .right img {
   max-width: 100%;
   height: 935px;
+}
+.cause {
+  height: 1012px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+}
+
+.cause h2 {
+  text-align: center;
+  font: normal normal normal 38px/55px "Open Sans", sans-serif;
+  letter-spacing: -0.76px;
+  color: #3c3c3c;
+  margin-bottom: 25px;
+}
+
+.decoration {
+  width: 253px;
+  height: 33px;
+  margin-bottom: 50px;
+}
+
+.buttons button {
+  width: 208px;
+  height: 79px;
+  border: 0.75px solid #3c3c3c;
+  margin: 10px; /* You can adjust this margin as needed for spacing between buttons */
+}
+
+.cause p {
+  text-align: center;
+  font: normal normal normal 22px/30px "Open Sans", sans-serif;
+  letter-spacing: 0px;
+  color: #3c3c3c;
+  margin-top: 70px;
+}
+
+.cause-columns {
+  width: 1344px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 66px;
+}
+
+.cause-segment {
+  display: flex;
+  justify-content: space-between;
+  height: 81px;
+  align-items: center;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.cause-left,
+.cause-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cause-left h3 {
+  /* You can add specific styles for the titles here if needed */
+}
+.cause-button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 66px;
+  gap: 20px; /* Adjust this value if you want more or less spacing between the buttons */
+}
+
+.cause-button-group button {
+  /* Style your buttons here if needed */
+}
+.cause,
+.contact-section {
+  justify-content: flex-start; /* Align content to start from the top */
+}
+
+.contact-section {
+  height: 1026px;
+  width: 100%; /* Ensure it takes up the full width of the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 142px;
+  position: relative; /* This is to position the pseudo-element relative to this section */
+}
+
+/* Add the pseudo-element to give opacity only to the background image */
+.contact-section::before {
+  content: "";
+  background-image: url("styles/images/Background-Contact-Form.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* 50% opacity for the image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* This ensures the pseudo-element covers the entire section */
+  z-index: -1; /* To make sure it stays behind the content */
+}
+
+.contact-section h2 {
+  text-align: center;
+  font: normal normal normal 38px/55px "Open Sans", sans-serif;
+  letter-spacing: -0.76px;
+  color: #3c3c3c;
+  margin-bottom: 25px;
+}
+
+.contact-decoration {
+  /* Insert your SVG decoration styles here */
+  width: 253px; /* Example width */
+  height: 33px; /* Example height */
+  margin-bottom: 70px;
+}
+
+.contact-form {
+  width: 528px;
+  height: 327px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* adjust as needed for spacing between form elements */
+}
+
+.contact-form label {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  border: none;
+  border-bottom: 2px solid #3c3c3c; /* underline style */
+  background: transparent;
+  outline: none;
+  width: 50%; /* adjust as needed */
+}
+
+.contact-form textarea {
+  height: 100px; /* adjust as needed */
+  margin-top: 44px;
+  resize: none; /* disables user resizing */
+}
+
+.contact-form button {
+  align-self: flex-end; /* positions the button to the right */
 }
