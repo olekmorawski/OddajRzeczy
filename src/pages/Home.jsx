@@ -121,23 +121,23 @@ const Home = () => {
           <button>2</button>
           <button>3</button>
         </div>
-        <div className="contact-section">
-          <h2>Skontaktuj się z nami</h2>
-          <div className="contact-decoration">
-            <img src="styles/images/Decoration.svg" alt="" />
-          </div>
-          <div className="contact-form">
-            <label>
-              Name
-              <input type="text" name="name" />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" />
-            </label>
-            <textarea name="message" placeholder="Your message..."></textarea>
-            <button>Contact Me</button>
-          </div>
+      </div>
+      <div className="contact-section">
+        <h2>Skontaktuj się z nami</h2>
+        <div className="contact-decoration">
+          <img src="styles/images/Decoration.svg" alt="" />
+        </div>
+        <div className="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" />
+          </label>
+          <textarea name="message" placeholder="Your message..."></textarea>
+          <button>Contact Me</button>
         </div>
       </div>
     </>
