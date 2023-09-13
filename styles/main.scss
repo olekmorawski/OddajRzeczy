@@ -13,10 +13,21 @@ body {
 }
 
 .bg {
-  background: transparent url("styles/images/Home-Hero-Image.jpg") 0% 0%
-    no-repeat padding-box;
+  position: relative;
   height: 100vh;
   width: 100vw;
+}
+
+.bg_image {
+  background: transparent url("styles/images/Home-Hero-Image.jpg") 0% 0%
+    no-repeat padding-box;
+  background-size: cover;
+  top: 0px;
+  left: -483px;
+  width: 1368px;
+  height: 963px;
+  position: absolute;
+  z-index: -1;
 }
 
 .nav {
@@ -94,7 +105,10 @@ body {
       height: 107px;
       margin-bottom: 20px;
       margin-right: 275px;
+      text-align: center;
+      font: normal normal normal 38px/55px Open Sans;
       letter-spacing: -0.76px;
+      color: #3c3c3c;
       text-align: center;
       margin-top: 210px;
     }
@@ -102,8 +116,8 @@ body {
     .decoration-img {
       display: block;
       margin: 25px auto 0;
-      width: 100px;
-      height: 50px;
+      width: 253px;
+      height: 33px;
     }
   }
 
@@ -132,6 +146,9 @@ body {
         font-size: 16px;
         display: inline-block;
         padding: 0 5px;
+        text-align: center;
+        font: normal normal 300 36px/45px Open Sans;
+        letter-spacing: 0px;
       }
     }
   }
@@ -143,12 +160,108 @@ body {
   width: 100vw;
   .login_body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .login_text {
+      margin-top: 123px;
+      text-align: center;
+      font: normal normal normal 40px/55px Open Sans;
+    }
     .login_box {
-      margin-top: 296px;
+      margin-top: 20px;
       width: 385px;
-      height: 235px;
+      height: auto; // Allow the height to adjust based on content
       background: #f0f1f1 0% 0% no-repeat padding-box;
+      padding: 40px 20px; // Adjusted padding for top and bottom to 40px
+
+      display: flex; // These three lines center the .form2 div vertically
+      flex-direction: column;
+      justify-content: space-between;
+
+      .form2 {
+        width: 100%;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          label.label-form {
+            margin-bottom: 10px;
+            align-self: flex-start;
+            margin-left: 58px;
+          }
+
+          input {
+            display: block;
+            width: 250px;
+            padding: 10px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 542px;
+      margin-top: 40px;
+
+      button {
+        width: 117px;
+        height: 50px;
+        border: 0.75px solid #3c3c3c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+
+        &.signup {
+          border: 1px solid black;
+        }
+
+        &.submit {
+          border: none;
+        }
+      }
+    }
+  }
+  .stats {
+    width: 1900px;
+    height: 384px;
+    background-color: yellow;
+    .stats_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .statistic {
+      flex: 1;
+      text-align: center;
+      padding: 0 10px;
+
+      .number {
+        text-align: center;
+        font: normal normal 300 90px/122px Open Sans;
+        letter-spacing: 0px;
+      }
+
+      .stat_name {
+        text-align: center;
+        font: normal normal normal 18px/30px Open Sans;
+        letter-spacing: -0.36px;
+        color: #3c3c3c;
+      }
+
+      .stat_desc {
+        text-align: center;
+        font: normal normal 300 16px/18px Merriweather;
+        letter-spacing: -0.32px;
+        color: #3c3c3c;
+      }
     }
   }
 }

@@ -45,53 +45,83 @@ const Login = () => {
       <div className="login">
         <Nav />
         <div className="login_body">
+          <div className="login_text">Log in</div>
           <div className="login_box">
-            <div className="login_text">Log in</div>
             <div className={"form2"}>
               <form
                 className={"register-form"}
                 onSubmit={handleSubmit}
                 id="myForm"
               >
-                <label className={"label-form"} htmlFor={"email"}>
+                <label
+                  className={"label-form"}
+                  htmlFor={"email"}
+                  style={{ background: "#F0F1F1" }}
+                >
                   E-mail
                 </label>
                 <input
                   name={"email"}
                   id={"email"}
-                  value={FormData.email}
+                  value={formData.email}
                   onChange={handleChange}
+                  style={{
+                    background: "#F0F1F1",
+                    borderBottom: "1px solid black",
+                    borderTop: "none",
+                    borderLeft: "none",
+                    borderRight: "none",
+                  }}
                 />
-                <label className={"label-form"} htmlFor={"password"}>
+                <label
+                  className={"label-form"}
+                  htmlFor={"password"}
+                  style={{ background: "#F0F1F1" }}
+                >
                   Password
                 </label>
                 <input
                   type={"password"}
                   id={"password"}
                   name={"password"}
-                  value={FormData.password}
+                  value={formData.password}
                   onChange={handleChange}
+                  style={{
+                    background: "#F0F1F1",
+                    borderBottom: "1px solid black",
+                    borderTop: "none",
+                    borderLeft: "none",
+                    borderRight: "none",
+                  }}
                 />
               </form>
             </div>
-            <div className="btns">
-              <a href={"/signup"}>
-                <button
-                  className={"signup"}
-                  type={"button"}
-                  onClick={() => navigate("/signup")}
-                >
-                  Sign Up
-                </button>
-              </a>
-              <button
-                className={"submit"}
-                type={"submit"}
-                onClick={handleSubmit}
-              >
-                Log in
-              </button>
-            </div>
+          </div>
+          <div className="btns">
+            <button
+              className={"signup"}
+              type={"button"}
+              onClick={() => navigate("/signup")}
+              style={{
+                border: "1px solid black",
+                background: "transparent",
+                cursor: "pointer",
+              }}
+            >
+              Sign Up
+            </button>
+            <button
+              className={"submit"}
+              type={"submit"}
+              onClick={handleSubmit}
+              style={{
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              Log in
+            </button>
           </div>
         </div>
       </div>
