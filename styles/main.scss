@@ -170,11 +170,10 @@ body {
     .login_box {
       margin-top: 20px;
       width: 385px;
-      height: auto; // Allow the height to adjust based on content
+      height: auto;
       background: #f0f1f1 0% 0% no-repeat padding-box;
-      padding: 40px 20px; // Adjusted padding for top and bottom to 40px
-
-      display: flex; // These three lines center the .form2 div vertically
+      padding: 40px 20px;
+      display: flex;
       flex-direction: column;
       justify-content: space-between;
 
@@ -189,9 +188,8 @@ body {
           label.label-form {
             margin-bottom: 10px;
             align-self: flex-start;
-            margin-left: 58px; // This will align the label to the start of the flex container
+            margin-left: 58px;
           }
-
           input {
             display: block;
             width: 250px;
@@ -207,7 +205,6 @@ body {
       width: 100%;
       max-width: 542px;
       margin-top: 40px;
-
       button {
         width: 117px;
         height: 50px;
@@ -216,11 +213,9 @@ body {
         justify-content: center;
         align-items: center;
         background-color: transparent;
-
         &.signup {
           border: 1px solid black;
         }
-
         &.submit {
           border: none;
         }
@@ -238,25 +233,21 @@ body {
     align-items: center;
     padding: 0 20px;
   }
-
   .statistic {
     flex: 1;
     text-align: center;
     padding: 0 10px;
-
     .number {
       text-align: center;
       font: normal normal 300 90px/122px Open Sans;
       letter-spacing: 0px;
     }
-
     .stat_name {
       text-align: center;
       font: normal normal normal 18px/30px Open Sans;
       letter-spacing: -0.36px;
       color: #3c3c3c;
     }
-
     .stat_desc {
       text-align: center;
       font: normal normal 300 16px/18px Merriweather;
@@ -268,7 +259,7 @@ body {
 .steps {
   display: flex;
   justify-content: center;
-  align-items: center; // centers content vertically
+  align-items: center;
   height: 199px;
   width: 100%;
   margin-top: 55px;
@@ -276,69 +267,60 @@ body {
   .content-container {
     display: flex;
     flex-direction: column;
-    align-items: center; // centers children horizontally
-
+    align-items: center;
     .steps_header {
       font-size: 38px;
       letter-spacing: -0.76px;
       color: #3c3c3c;
-      margin-bottom: 25px; // space between the header and the SVG
+      margin-bottom: 25px; 
     }
-
     .decoration {
       width: 253px;
       height: 33px;
-      background: url("../styles/images/Decoration.svg") no-repeat center center; // replace with your SVG path
+      background: url("../styles/images/Decoration.svg") no-repeat center center;
     }
   }
 }
 .steps_icons_row {
   display: flex;
-  justify-content: space-between; // Distributes the space evenly between the icon containers
+  justify-content: space-between;
   align-items: center;
-  width: 100%; // Adjust if needed
+  width: 100%;
   background-color: #f0f1f1;
   height: 325px;
-
   .steps_icon_conteiner {
-    flex: 1; // Each container will take up an equal amount of space
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-
     .icon {
       margin-bottom: 10px;
-
       img {
         width: 50px;
         height: 50px;
       }
     }
-
     .icon_header {
       margin-bottom: 10px;
     }
-
     .icon_line {
       width: 80%;
       height: 1px;
       background-color: #3c3c3c;
       margin-bottom: 10px;
     }
-
     .icon_description {
       // Styles for the description
     }
   }
 }
 .btn_center {
-  display: flex; // Use flexbox for centering
-  justify-content: center; // Horizontally center the button
-  align-items: center; // Vertically center the button
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 235px;
   width: 100%;
-
   button {
     width: 310px;
     height: 120px;
@@ -347,7 +329,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
     span {
       font-size: 16px;
       display: inline-block;
@@ -364,7 +345,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .left,
 .right {
   flex: 0 0 50%;
@@ -375,15 +355,12 @@ body {
   background-color: #f0f1f1;
   height: 935px;
 }
-
 .left h1 {
   margin-bottom: 10px;
 }
-
 .left .decoration {
   margin-bottom: 20px;
 }
-
 .right img {
   max-width: 100%;
   height: 935px;
