@@ -433,7 +433,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 66px;
-  gap: 20px; /* Adjust this value if you want more or less spacing between the buttons */
+  gap: 20px;
 }
 
 .cause-button-group button {
@@ -441,32 +441,31 @@ body {
 }
 .cause,
 .contact-section {
-  justify-content: flex-start; /* Align content to start from the top */
+  justify-content: flex-start;
 }
 
 .contact-section {
   height: 1026px;
-  width: 100%; /* Ensure it takes up the full width of the viewport */
+  width: 100%; 
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding-right: 142px;
-  position: relative; /* This is to position the pseudo-element relative to this section */
+  position: relative;
 }
 
-/* Add the pseudo-element to give opacity only to the background image */
 .contact-section::before {
   content: "";
   background-image: url("styles/images/Background-Contact-Form.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.5; /* 50% opacity for the image */
+  opacity: 0.5;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; /* This ensures the pseudo-element covers the entire section */
-  z-index: -1; /* To make sure it stays behind the content */
+  bottom: 0; 
+  z-index: -1; 
 }
 
 .contact-section h2 {
@@ -478,9 +477,8 @@ body {
 }
 
 .contact-decoration {
-  /* Insert your SVG decoration styles here */
-  width: 253px; /* Example width */
-  height: 33px; /* Example height */
+  width: 253px;
+  height: 33px;
   margin-bottom: 70px;
 }
 
@@ -489,7 +487,7 @@ body {
   height: 327px;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* adjust as needed for spacing between form elements */
+  gap: 20px;
 }
 
 .contact-form label {
@@ -502,18 +500,18 @@ body {
 .contact-form input[type="email"],
 .contact-form textarea {
   border: none;
-  border-bottom: 2px solid #3c3c3c; /* underline style */
+  border-bottom: 2px solid #3c3c3c;
   background: transparent;
   outline: none;
-  width: 50%; /* adjust as needed */
+  width: 50%;
 }
 
 .contact-form textarea {
-  height: 100px; /* adjust as needed */
+  height: 100px;
   margin-top: 44px;
-  resize: none; /* disables user resizing */
+  resize: none;
 }
 
 .contact-form button {
-  align-self: flex-end; /* positions the button to the right */
+  align-self: flex-end;
 }
