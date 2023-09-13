@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Nav from "../components/Nav";
+import { useAuth } from "../../authContext";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const Login = () => {
     password: "",
   });
   const [isLoginSuccessful, setIsLoginSuccessful] = useState(false);
+  const { login } = useAuth();
 
   let navigate = useNavigate();
 
@@ -20,7 +22,10 @@ const Login = () => {
         formData
       );
       const success = response.status === 201;
-      if (success) setIsLoginSuccessful(true);
+      if (success) {
+        setIsLoginSuccessful(true);
+        login();
+      }
     } catch (err) {
       console.log(err);
     }

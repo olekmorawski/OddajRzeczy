@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Nav from "../components/Nav";
+import { useAuth } from "../../authContext";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const Register = () => {
     confirmPassword: "",
   });
   const [isRegisterSuccessful, setIsRegisterSuccessful] = useState(false);
+  const { login } = useAuth();
 
   let navigate = useNavigate();
 
@@ -26,7 +28,10 @@ const Register = () => {
         formData
       );
       const success = response.status === 201;
-      if (success) setIsRegisterSuccessful(true);
+      if (success) {
+        login(); // This will update the authentication state
+        setIsLoginSuccessful(true);
+      }
     } catch (err) {
       console.log(err);
     }
