@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Nav from "../components/Nav";
-import { useAuth } from "../../authContext";
+import { useAuth } from "../services/authContext";
 
 const Register = () => {
   const [formData, setFormData] = useState({

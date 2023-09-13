@@ -189,7 +189,7 @@ body {
           label.label-form {
             margin-bottom: 10px;
             align-self: flex-start;
-            margin-left: 58px;
+            margin-left: 58px; // This will align the label to the start of the flex container
           }
 
           input {
@@ -227,41 +227,164 @@ body {
       }
     }
   }
-  .stats {
-    width: 1900px;
-    height: 384px;
-    background-color: yellow;
-    .stats_box {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
+}
+.stats {
+  width: 100%;
+  height: 384px;
+  background-image: url("styles/images/3 Columns Background.png");
+  .stats_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .statistic {
+    flex: 1;
+    text-align: center;
+    padding: 0 10px;
+
+    .number {
+      text-align: center;
+      font: normal normal 300 90px/122px Open Sans;
+      letter-spacing: 0px;
     }
 
-    .statistic {
-      flex: 1;
+    .stat_name {
       text-align: center;
-      padding: 0 10px;
+      font: normal normal normal 18px/30px Open Sans;
+      letter-spacing: -0.36px;
+      color: #3c3c3c;
+    }
 
-      .number {
-        text-align: center;
-        font: normal normal 300 90px/122px Open Sans;
-        letter-spacing: 0px;
-      }
-
-      .stat_name {
-        text-align: center;
-        font: normal normal normal 18px/30px Open Sans;
-        letter-spacing: -0.36px;
-        color: #3c3c3c;
-      }
-
-      .stat_desc {
-        text-align: center;
-        font: normal normal 300 16px/18px Merriweather;
-        letter-spacing: -0.32px;
-        color: #3c3c3c;
-      }
+    .stat_desc {
+      text-align: center;
+      font: normal normal 300 16px/18px Merriweather;
+      letter-spacing: -0.32px;
+      color: #3c3c3c;
     }
   }
+}
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center; // centers content vertically
+  height: 199px;
+  width: 100%;
+  margin-top: 55px;
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // centers children horizontally
+
+    .steps_header {
+      font-size: 38px;
+      letter-spacing: -0.76px;
+      color: #3c3c3c;
+      margin-bottom: 25px; // space between the header and the SVG
+    }
+
+    .decoration {
+      width: 253px;
+      height: 33px;
+      background: url("../styles/images/Decoration.svg") no-repeat center center; // replace with your SVG path
+    }
+  }
+}
+.steps_icons_row {
+  display: flex;
+  justify-content: space-between; // Distributes the space evenly between the icon containers
+  align-items: center;
+  width: 100%; // Adjust if needed
+  background-color: #f0f1f1;
+  height: 325px;
+
+  .steps_icon_conteiner {
+    flex: 1; // Each container will take up an equal amount of space
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .icon {
+      margin-bottom: 10px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .icon_header {
+      margin-bottom: 10px;
+    }
+
+    .icon_line {
+      width: 80%;
+      height: 1px;
+      background-color: #3c3c3c;
+      margin-bottom: 10px;
+    }
+
+    .icon_description {
+      // Styles for the description
+    }
+  }
+}
+.btn_center {
+  display: flex; // Use flexbox for centering
+  justify-content: center; // Horizontally center the button
+  align-items: center; // Vertically center the button
+  height: 235px;
+  width: 100%;
+
+  button {
+    width: 310px;
+    height: 120px;
+    border: 0.75px solid #3c3c3c;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 16px;
+      display: inline-block;
+      padding: 0 5px;
+      text-align: center;
+      font: normal normal 300 36px/45px Open Sans;
+      letter-spacing: 0px;
+    }
+  }
+}
+.about {
+  height: 935px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left,
+.right {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f1f1;
+  height: 935px;
+}
+
+.left h1 {
+  margin-bottom: 10px;
+}
+
+.left .decoration {
+  margin-bottom: 20px;
+}
+
+.right img {
+  max-width: 100%;
+  height: 935px;
 }

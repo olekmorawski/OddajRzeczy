@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Nav from "../components/Nav";
-import { useAuth } from "../../authContext";
+import { useAuth } from "../services/authContext";
 
 const Login = () => {
   const [formData, setFormData] = useState({
