@@ -14,35 +14,29 @@ body {
 
 .bg {
   position: relative;
-  height: 100vh;
   width: 100vw;
 }
 
-.bg_image {
-  background: transparent url("styles/images/Home-Hero-Image.jpg") 0% 0%
-    no-repeat padding-box;
-  background-size: cover;
-  top: 0px;
-  left: -483px;
-  width: 1368px;
-  height: 963px;
-  position: absolute;
-  z-index: -1;
+.nav_box {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
 }
-
 .nav {
+  z-index: 42;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  width: 100%;
+  width: 750px;
+  height: 95px;
   background-color: white;
-
+  align-items: center;
+  gap: 10px;
   .auth_links {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 10px;
-
+    justify-content: flex-end;
+    margin-left: 250px;
     a {
       margin-top: 37px;
       width: 80px;
@@ -53,14 +47,10 @@ body {
       text-decoration: none;
       display: block;
       line-height: 42px;
+      cursor: pointer;
     }
     a:first-child {
       border: none;
-    }
-
-    a:last-child {
-      border: 0.75px solid #fad648;
-      margin-right: 142px;
     }
   }
 
@@ -68,15 +58,18 @@ body {
     display: flex;
     align-items: center;
     list-style: none;
-
+    justify-content: space-between;
+    width: 701px;
+    margin-right: 250px;
     a {
-      width: 145px;
       height: 42px;
       text-align: center;
-      margin-left: 5px;
       text-decoration: none;
       display: block;
       line-height: 42px;
+      padding-left: 20px;
+      padding-right: 20px;
+      cursor: pointer;
       &.active {
         border: 0.75px solid #3c3c3c;
       }
@@ -84,71 +77,69 @@ body {
         border: none;
       }
     }
-    a:last-child {
-      margin-right: 142px;
-    }
   }
 }
 
 .header {
   display: flex;
   align-items: center;
-
-  .text-and-buttons {
+  .header_container {
+    width: 100vw;
+    height: 970px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    flex: 1;
-
-    h1 {
-      width: 674px;
-      height: 107px;
-      margin-bottom: 20px;
-      margin-right: 275px;
-      text-align: center;
-      font: normal normal normal 38px/55px Open Sans;
-      letter-spacing: -0.76px;
-      color: #3c3c3c;
-      text-align: center;
-      margin-top: 210px;
+    .landing_img {
+      width: 885px;
+      height: 963px;
+      background-image: url("styles/images/Home-Hero-Image.jpg");
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
-
-    .decoration-img {
-      display: block;
-      margin: 25px auto 0;
-      width: 253px;
-      height: 33px;
-    }
-  }
-
-  .buttons {
-    display: flex;
-    margin-top: 20px;
-    align-items: flex-start;
-
-    button {
-      width: 310px;
-      height: 120px;
-      border: 0.75px solid #3c3c3c;
-      background-color: transparent;
-      margin-left: 20px;
+    .content_container {
+      width: 1015px;
+      height: 963px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      flex-direction: row;
-      &:first-child {
-        margin-right: 20px;
-      }
-      &:last-child {
-        margin-right: 278px;
-      }
-      span {
-        font-size: 16px;
-        display: inline-block;
-        padding: 0 5px;
+      .text-and-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 350px;
+        margin-left: 600px;
+        width: 674px;
+        height: 350px;
         text-align: center;
-        font: normal normal 300 36px/45px Open Sans;
-        letter-spacing: 0px;
+        .title {
+          width: 800px;
+          font-family: $font-base;
+          color: #3c3c3c;
+          font-size: 38px;
+          margin-bottom: 35px;
+        }
+        img {
+          margin-bottom: 65px;
+        }
+        .buttons {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 674px;
+          gap: 50px;
+          button {
+            width: 310px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            span {
+              font-family: $font-base;
+              font-size: 36px;
+              color: #3c3c3c;
+            }
+          }
+        }
       }
     }
   }
@@ -305,7 +296,7 @@ body {
       margin-bottom: 10px;
     }
     .icon_line {
-      width: 80%;
+      width: 20%;
       height: 1px;
       background-color: #3c3c3c;
       margin-bottom: 10px;
@@ -446,11 +437,10 @@ body {
 
 .contact-section {
   height: 1026px;
-  width: 100%; 
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-right: 142px;
   position: relative;
 }
 
@@ -464,8 +454,8 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; 
-  z-index: -1; 
+  bottom: 0;
+  z-index: -1;
 }
 
 .contact-section h2 {

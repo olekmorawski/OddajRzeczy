@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <>
       <div className="bg">
-        <div className="bg_image"></div>
         <Nav />
         <div className="header">
           <Header />
@@ -68,8 +67,8 @@ const Home = () => {
               <img src="styles\images\Decoration.svg" alt="" />
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              lacinia odio vitae vestibulum.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium minima, libero provident asperiores minus voluptate.
             </p>
           </div>
           <div className="right">
