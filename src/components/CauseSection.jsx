@@ -4,7 +4,7 @@ import data from "../services/data";
 const CauseSection = () => {
   const [currentSelection, setCurrentSelection] = useState("fundacje");
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 3;
+  const maxItemsPerPage = 3;
 
   const handleClick = (selection) => {
     setCurrentSelection(selection);
@@ -12,8 +12,8 @@ const CauseSection = () => {
   };
 
   const renderColumns = () => {
-    const startIndex = currentPage * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
+    const startIndex = currentPage * maxItemsPerPage;
+    const endIndex = startIndex + maxItemsPerPage;
     return data[0][currentSelection]
       .slice(startIndex, endIndex)
       .map((item, index) => (
@@ -30,7 +30,7 @@ const CauseSection = () => {
   };
 
   const numberOfPages = Math.ceil(
-    data[0][currentSelection].length / itemsPerPage
+    data[0][currentSelection].length / maxItemsPerPage
   );
 
   return (
@@ -55,7 +55,7 @@ const CauseSection = () => {
       </p>
       <div className="cause-columns">{renderColumns()}</div>
       <div className="cause-button-group">
-        {Array.from({ length: numberOfPages }).map((_, index) => (
+        {Array.from({ length: numberOfPages }).map((entry, index) => (
           <button key={index} onClick={() => setCurrentPage(index)}>
             {index + 1}
           </button>
