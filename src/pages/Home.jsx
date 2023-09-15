@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Statistic from "../components/Statistic";
 import StepIcon from "../components/StepIcon";
 import { Element } from "react-scroll";
+import CauseSection from "../components/CauseSection";
 
 const Home = () => {
   return (
@@ -77,56 +78,7 @@ const Home = () => {
         </div>
       </Element>
       <Element name="organizacjeSection">
-        <div className="cause">
-          <h2>Komu pomagamy?</h2>
-          <div className="decoration">
-            <img src="styles\images\Decoration.svg" alt="" />
-          </div>
-          <div className="buttons">
-            <button>Button 1</button>
-            <button>Button 2</button>
-            <button>Button 3</button>
-          </div>
-          <p>
-            W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi
-            współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i
-            czego potrzebują.
-          </p>
-          <div className="cause-columns">
-            <div className="cause-segment">
-              <div className="cause-left">
-                <h3>Title 1</h3>
-                <p>Description 1</p>
-              </div>
-              <div className="cause-right">
-                <p>Additional Info 1</p>
-              </div>
-            </div>
-            <div className="cause-segment">
-              <div className="cause-left">
-                <h3>Title 2</h3>
-                <p>Description 2</p>
-              </div>
-              <div className="cause-right">
-                <p>Additional Info 2</p>
-              </div>
-            </div>
-            <div className="cause-segment">
-              <div className="cause-left">
-                <h3>Title 3</h3>
-                <p>Description 3</p>
-              </div>
-              <div className="cause-right">
-                <p>Additional Info 3</p>
-              </div>
-            </div>
-          </div>
-          <div className="cause-button-group">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-          </div>
-        </div>
+        <CauseSection />
       </Element>
       <Element name="contactSection">
         <div className="contact-section">
